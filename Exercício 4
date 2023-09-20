@@ -1,0 +1,23 @@
+namespace Lista_de_atividades_2
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            int num, media, soma = 0;
+
+            for (int i = 0; i <= 4; i++)
+            {
+                Console.WriteLine("Digite o " +(i+1) + "° numero");
+                num = int.Parse(Console.ReadLine());
+                soma = soma + num;
+            }
+            media = soma / 5;
+            Console.WriteLine("A soma dos numeros digitados é " + soma);
+            Console.WriteLine("A media dos numeros digitados é " + media);
+
+            Console.ReadKey();
+
+        }
+    }
+}
