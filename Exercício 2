@@ -1,0 +1,29 @@
+namespace Lista_de_atividades_2
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            string usuario, senha;
+
+            Console.WriteLine("Digite o nome de usuario");
+            usuario = Console.ReadLine();
+
+            Console.WriteLine("Digite a senha");
+            senha = Console.ReadLine();
+            
+           while (usuario == senha) {
+                Console.WriteLine("O nome de usuario não pode ser igual a senha");
+                Console.WriteLine("Digite o nome de usuario");
+                usuario = Console.ReadLine();
+
+                Console.WriteLine("Digite a senha");
+                senha = Console.ReadLine();
+            
+            }
+            Console.ReadKey();
+
+
+        }
+    }
+}
