@@ -1,0 +1,25 @@
+namespace Lista_de_atividades_2
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            int nota;
+
+            Console.WriteLine("Digite uma nota");
+            nota = int.Parse (Console.ReadLine());
+
+                    
+           while (nota > 10) {
+                Console.WriteLine("A nota digita é invalida");
+                Console.WriteLine("Digite uma nota");
+                nota = int.Parse (Console.ReadLine());
+                                         
+            }
+            Console.WriteLine("Nota válida!");
+            Console.ReadKey();
+
+
+        }
+    }
+}
