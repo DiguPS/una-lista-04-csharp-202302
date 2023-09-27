@@ -1,0 +1,24 @@
+namespace Lista_de_atividades_2
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            int num1, num2;
+            Console.WriteLine("Digite o primeiro numero");
+            num1 = int.Parse (Console.ReadLine());
+            Console.WriteLine("Digite o segundo numero");
+            num2 = int.Parse (Console.ReadLine());
+
+            for (int i = num1; i < num2; i++)
+            {
+                Console.WriteLine(num1);
+                num1++;
+            }
+
+
+            Console.ReadKey();
+
+        }
+    }
+}
