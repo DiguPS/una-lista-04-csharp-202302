@@ -1,0 +1,69 @@
+using System;
+
+class Program
+{
+    static void Main()
+    {
+        string nome;
+        int idade;
+        double salario;
+        char sexo;
+        char estadoCivil;
+
+        Console.Write("Digite o nome (maior que 3 caracteres): ");
+        nome = Console.ReadLine();
+
+        while (nome.Length <= 3)
+        {
+            Console.Write("Nome inválido. Digite novamente (maior que 3 caracteres): ");
+            nome = Console.ReadLine();
+        }
+
+        Console.Write("Digite a idade (entre 0 e 150): ");
+        idade = int.Parse(Console.ReadLine());
+
+        while (idade < 0 || idade > 150)
+        {
+            Console.Write("Idade inválida. Digite novamente (entre 0 e 150): ");
+            idade = int.Parse(Console.ReadLine());
+        }
+
+        Console.Write("Digite o salário (maior que zero): ");
+        salario = double.Parse(Console.ReadLine());
+
+        while (salario <= 0)
+        {
+            Console.Write("Salário inválido. Digite novamente (maior que zero): ");
+            salario = double.Parse(Console.ReadLine());
+        }
+
+        Console.Write("Digite o sexo ('f' ou 'm'): ");
+        sexo = char.ToLower(Console.ReadKey().KeyChar);
+        Console.WriteLine();
+
+        while (sexo != 'f' && sexo != 'm')
+        {
+            Console.Write("Sexo inválido. Digite novamente ('f' ou 'm'): ");
+            sexo = char.ToLower(Console.ReadKey().KeyChar);
+            Console.WriteLine();
+        }
+
+        Console.Write("Digite o estado civil ('s', 'c', 'v' ou 'd'): ");
+        estadoCivil = char.ToLower(Console.ReadKey().KeyChar);
+        Console.WriteLine();
+
+        while (estadoCivil != 's' && estadoCivil != 'c' && estadoCivil != 'v' && estadoCivil != 'd')
+        {
+            Console.Write("Estado civil inválido. Digite novamente ('s', 'c', 'v' ou 'd'): ");
+            estadoCivil = char.ToLower(Console.ReadKey().KeyChar);
+            Console.WriteLine();
+        }
+
+        Console.WriteLine("\nInformações válidas:");
+        Console.WriteLine($"Nome: {nome}");
+        Console.WriteLine($"Idade: {idade}");
+        Console.WriteLine($"Salário: {salario}");
+        Console.WriteLine($"Sexo: {sexo}");
+        Console.WriteLine($"Estado Civil: {estadoCivil}");
+    }
+}
